@@ -30,10 +30,28 @@ export const Large = Template.bind({});
 Large.args = {
   size: "large",
   label: "Button",
+  variant: "error",
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: "small",
   label: "Button",
+  variant: "success",
+};
+
+export const Text = Template.bind({});
+
+Text.args = {
+  size: "small",
+  label: "Button",
+  variant: "text",
+  disabled: true,
+};
+export const Disabled = Template.bind({});
+
+Disabled.args = {
+  size: "small",
+  label: "Disabled",
+  disabled: true,
 };

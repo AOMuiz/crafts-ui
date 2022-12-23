@@ -62,6 +62,23 @@ export const variantStyles = (variant = "primary") =>
         cursor: not-allowed;
       }
     `,
+    text: css`
+      color: ${theme.colors.primary[500]};
+      background-color: ${theme.colors.neutral[0]};
+      &:hover {
+        color: ${theme.colors.primary[600]};
+      }
+      &:active {
+        color: ${theme.colors.primary[700]};
+      }
+      &:focus {
+        outline: solid 2px ${theme.colors.primary[100]};
+      }
+      &:disabled {
+        color: ${theme.colors.neutral[400]};
+        cursor: not-allowed;
+      }
+    `,
     error: css`
       background: ${theme.colors.error[600]};
       &:hover {
