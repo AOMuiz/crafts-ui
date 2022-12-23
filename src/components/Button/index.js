@@ -43,6 +43,10 @@ Button.propTypes = {
    */
   size: PropTypes.oneOf(["small", "standard", "large"]),
   /**
+   * Should the button be disabled?
+   */
+  disabled: PropTypes.bool,
+  /**
    * Button contents
    */
   label: PropTypes.string.isRequired,

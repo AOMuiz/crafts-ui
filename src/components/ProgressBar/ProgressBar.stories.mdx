@@ -1,0 +1,38 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import ProgressBar from "./ProgressBar";
+
+<Meta
+  title="Components/ProgressBar"
+  component={ProgressBar}
+  argTypes={{
+    value: {
+      control: {
+        type: "number",
+        min: 0,
+        max: 100,
+      },
+    },
+    size: {
+      control: {
+        type: "select",
+        options: ["small", "medium", "large"],
+      },
+    },
+  }}
+/>
+
+export const Template = (args) => <ProgressBar {...args} />;
+
+# ProgressBar
+
+<Canvas>
+  <Story name="Default" args={{ value: 50, size: "medium" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Large" args={{ value: 50, size: "large" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Small" args={{ value: 50, size: "small" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
