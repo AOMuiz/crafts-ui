@@ -14,7 +14,7 @@ export const variantStyles = (variant = "primary") =>
       }
       &:focus {
         background: ${theme.colors.primary[600]};
-        border: 2px solid ${theme.colors.primary[100]};
+        outline: solid 2px ${theme.colors.primary[100]};
       }
       &:disabled {
         background: ${theme.colors.neutral[400]};
@@ -30,8 +30,9 @@ export const variantStyles = (variant = "primary") =>
         color: ${theme.colors.neutral[800]};
       }
       &:focus {
-        background: ${theme.colors.neutral[600]};
-        border: 2px solid ${theme.colors.primary[100]};
+        background: ${theme.colors.neutral[100]};
+        border: 1px solid ${theme.colors.neutral[600]};
+        outline: solid 2px ${theme.colors.primary[100]};
         color: ${theme.colors.neutral[800]};
       }
       &:active {
@@ -46,6 +47,20 @@ export const variantStyles = (variant = "primary") =>
     `,
     success: css`
       background: #22a06b;
+      &:hover {
+        background: ${theme.colors.success[700]};
+      }
+      &:active {
+        background: ${theme.colors.success[900]};
+      }
+      &:focus {
+        outline: solid 2px ${theme.colors.success[0]};
+        background: ${theme.colors.success[700]};
+      }
+      &:disabled {
+        background: ${theme.colors.success[0]};
+        cursor: not-allowed;
+      }
     `,
     error: css`
       background: ${theme.colors.error[600]};
@@ -56,7 +71,7 @@ export const variantStyles = (variant = "primary") =>
         background: ${theme.colors.error[900]};
       }
       &:focus {
-        border: 2px solid ${theme.colors.error[0]};
+        outline: solid 2px ${theme.colors.error[0]};
         background: ${theme.colors.error[700]};
       }
       &:disabled {

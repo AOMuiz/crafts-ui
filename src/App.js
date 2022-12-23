@@ -6,19 +6,30 @@ function App() {
     <div className="App">
       <section>
         <p>Primary</p>
-        <Button text="Primary standard" />
-        <Button text="Primary standard" disabled />
+        <Button label="Primary standard" />
+        <Button label="Primary standard" disabled />
       </section>
       <section>
         <p>Secondary</p>
-        <Button text="Secondary" variant="secondary" />
-        <Button text="Secondary small" variant="secondary" disabled />
+        <Button label="Secondary" variant="secondary" />
+        <Button label="Secondary small" variant="secondary" disabled />
       </section>
       <section>
         <p>Error</p>
-        <Button text="Error" variant="error" />
-        <Button text="Error" variant="error" size={"large"} />
-        <Button text="Error small" variant="error" disabled size={"small"} />
+        <Button label="Error" variant="error" />
+        <Button label="Error" variant="error" size={"large"} />
+        <Button label="Error small" variant="error" disabled size={"small"} />
+      </section>
+      <section>
+        <p>Success</p>
+        <Button label="Success" variant="success" />
+        <Button label="Success" variant="success" size={"large"} />
+        <Button
+          label="Success small"
+          variant="success"
+          disabled
+          size={"small"}
+        />
       </section>
       <Box />
     </div>
