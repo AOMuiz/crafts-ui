@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import VisuallyHidden from "./VisuallyHidden";
+import Icon from "../Icon";
+
+<Meta title="components/VisuallyHidden" component={VisuallyHidden} />
+
+export const Template = (args) => <VisuallyHidden {...args} />;
+
+# VisuallyHidden
+
+<Canvas>
+  <Story name="Default">
+    <>
+      <Icon id="search" />
+      <VisuallyHidden>Search</VisuallyHidden>
+    </>
+  </Story>
+</Canvas>
