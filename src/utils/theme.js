@@ -36,6 +36,7 @@ export const theme = {
   maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536],
   colors: {
     transparent: "transparent",
+    black: "black",
     ...colorTheme,
     // ... and so on
   },

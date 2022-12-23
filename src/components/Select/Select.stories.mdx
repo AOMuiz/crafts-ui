@@ -1,0 +1,27 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+import Select from "./Select";
+
+<Meta title="components/Select" component={Select} />
+
+# Select
+
+export const ManagedSelect = () => {
+  const [value, setValue] = React.useState("newest");
+  return (
+    <Select
+      label="Sort"
+      value={value}
+      onChange={(ev) => setValue(ev.target.value)}
+    >
+      <option value="newest">Newest Releases</option>
+      <option value="price">Price</option>
+      <option value="curated">Curated</option>
+    </Select>
+  );
+};
+
+export const Template = (args) => <ProgressBar {...args} />;
+
+<Story name="Default">
+  <ManagedSelect />
+</Story>
