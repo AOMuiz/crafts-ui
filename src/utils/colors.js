@@ -1,5 +1,6 @@
 export const neutral = {
   0: "#ffffff",
+  10: "#f7f7f7",
   100: "#F9FAFC",
   200: "#EDEFF5",
   300: "#E6E8F0",

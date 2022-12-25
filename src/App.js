@@ -1,5 +1,6 @@
 import Button from "./components/Button";
 import Link from "./components/Link/Link";
+import Spinner from "./components/Spinner";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         />
       </section>
       <Link children="I am span" href="#" />
+      <Spinner />
     </div>
   );
 }
