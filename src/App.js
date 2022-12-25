@@ -1,5 +1,5 @@
 import Button from "./components/Button";
-import Box from "./components/Box";
+import Link from "./components/Link/Link";
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
           size={"small"}
         />
       </section>
-      <Box />
+      <Link children="I am span" href="#" />
     </div>
   );
 }
