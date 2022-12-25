@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { variantStyles, sizeStyles } from "./ButtonUtils";
 
-const Button = ({ label, variant, size, ...delegated }) => {
+const Button = ({ label, variant, size, className, ...delegated }) => {
   return (
-    <OButton variant={variant} size={size} {...delegated}>
+    <OButton variant={variant} size={size} className={className} {...delegated}>
       {label}
     </OButton>
   );
