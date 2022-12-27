@@ -4,25 +4,24 @@ import { css } from "styled-components";
 export const variantStyles = (variant = "primary") =>
   ({
     primary: css`
-      color: white;
-      background: ${theme.colors.primary[500]};
+      background-color: ${theme.colors.primary[500]};
       &:hover {
-        background: ${theme.colors.primary[600]};
+        background-color: ${theme.colors.primary[600]};
       }
       &:active {
-        background: ${theme.colors.primary[700]};
+        background-color: ${theme.colors.primary[700]};
       }
       &:focus {
-        background: ${theme.colors.primary[600]};
+        background-color: ${theme.colors.primary[600]};
         outline: solid 2px ${theme.colors.primary[100]};
       }
       &:disabled {
-        background: ${theme.colors.neutral[400]};
+        background-color: ${theme.colors.neutral[400]};
         cursor: not-allowed;
       }
     `,
     secondary: css`
-      background: ${theme.colors.neutral[0]};
+      background-color: ${theme.colors.neutral[0]};
       color: ${theme.colors.neutral[700]};
       border: 1px solid ${theme.colors.neutral[400]};
       &:hover {
@@ -30,35 +29,35 @@ export const variantStyles = (variant = "primary") =>
         color: ${theme.colors.neutral[800]};
       }
       &:focus {
-        background: ${theme.colors.neutral[100]};
+        background-color: ${theme.colors.neutral[100]};
         border: 1px solid ${theme.colors.neutral[600]};
         outline: solid 2px ${theme.colors.primary[100]};
         color: ${theme.colors.neutral[800]};
       }
       &:active {
-        background: ${theme.colors.neutral[100]};
+        background-color: ${theme.colors.neutral[100]};
         color: ${theme.colors.neutral[800]};
       }
       &:disabled {
-        background: ${theme.colors.neutral[0]};
+        background-color: ${theme.colors.neutral[0]};
         cursor: not-allowed;
         color: ${theme.colors.neutral[400]};
       }
     `,
     success: css`
-      background: #22a06b;
+      background-color: #22a06b;
       &:hover {
-        background: ${theme.colors.success[700]};
+        background-color: ${theme.colors.success[700]};
       }
       &:active {
-        background: ${theme.colors.success[900]};
+        background-color: ${theme.colors.success[900]};
       }
       &:focus {
         outline: solid 2px ${theme.colors.success[0]};
-        background: ${theme.colors.success[700]};
+        background-color: ${theme.colors.success[700]};
       }
       &:disabled {
-        background: ${theme.colors.success[0]};
+        background-color: ${theme.colors.success[0]};
         cursor: not-allowed;
       }
     `,

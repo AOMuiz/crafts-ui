@@ -1,4 +1,5 @@
 import React from "react";
+import { theme } from "../../utils/theme";
 import Button from "./index";
 
 export default {
@@ -24,18 +25,18 @@ Secondary.args = {
   variant: "secondary",
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
+export const Error = Template.bind({});
+
+Error.args = {
   label: "Button",
   variant: "error",
 };
 
-export const Small = Template.bind({});
+export const Success = Template.bind({});
 
-Small.args = {
+Success.args = {
   size: "small",
-  label: "Button",
+  label: "Success",
   variant: "success",
 };
 
@@ -53,4 +54,11 @@ Disabled.args = {
   size: "small",
   label: "Disabled",
   disabled: true,
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  size: "large",
+  label: "Button",
+  variant: "error",
 };

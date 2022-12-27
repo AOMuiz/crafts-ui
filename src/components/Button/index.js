@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { colorsFn } from "../../utils/styledFunctions";
 import { variantStyles, sizeStyles } from "./ButtonUtils";
 
 const Button = ({ label, variant, size, className, ...delegated }) => {
@@ -11,9 +12,6 @@ const Button = ({ label, variant, size, className, ...delegated }) => {
 };
 
 const OButton = styled.button`
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   color: white;
   border-radius: 4px;
   min-width: fit-content;
@@ -25,6 +23,7 @@ const OButton = styled.button`
 
   ${({ variant }) => variantStyles(variant)}
   ${({ size }) => sizeStyles(size)}
+  ${colorsFn}
 `;
 
 export default Button;
@@ -33,11 +32,22 @@ Button.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */
-  variant: PropTypes.oneOf(["primary", "secondary", "error", "success"]),
+  variant: PropTypes.oneOf([
+    "primary",
+    "secondary",
+    "error",
+    "success",
+    "text",
+    "error",
+  ]),
   /**
    * What background color to use
    */
-  backgroundColor: PropTypes.string,
+  bg: PropTypes.string,
+  /**
+   * What text color to use
+   */
+  color: PropTypes.string,
   /**
    * How large should the button be?
    */
@@ -57,7 +67,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
+  bg: null,
   variant: "primary",
   size: "standard",
   onClick: undefined,
