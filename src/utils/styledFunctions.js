@@ -28,6 +28,6 @@ export const spaceFn = (size = "standard") => {
 };
 
 export let fontSizesFn = css`
-  color: ${(props) => (props.color ? props.color : "initial")};
-  background-color: ${(props) => (props.bg ? props.bg : "initial")};
+  font-size: ${(props) => props.fontSize && props.fontSize};
+  font-weight: ${(props) => props.weight && props.weight};
 `;

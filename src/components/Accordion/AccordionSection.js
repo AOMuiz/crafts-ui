@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "../../utils/theme";
+import Icon from "../Icon";
 
 export const AccordionSection = (props) => {
   const onClick = () => {
@@ -9,11 +10,11 @@ export const AccordionSection = (props) => {
 
   return (
     <AccordionItem isOpen={props.isOpen}>
-      <AccordionHeader onClick={onClick} style={{ cursor: "pointer" }}>
+      <AccordionHeader onClick={onClick} isOpen={props.isOpen}>
         <AccordionTitle>{props.label}</AccordionTitle>
         <AccordionIcon>
-          {!props.isOpen && <span>&#9650;</span>}
-          {props.isOpen && <span>&#9660;</span>}
+          {!props.isOpen && <Icon id={"chevron-up"} strokeWidth={1.3} />}
+          {props.isOpen && <Icon id={"chevron-down"} strokeWidth={1.3} />}
         </AccordionIcon>
       </AccordionHeader>
       {props.isOpen && <AccordionContent>{props.children}</AccordionContent>}
@@ -33,7 +34,6 @@ const AccordionItem = styled.div`
   border: 1px solid ${theme.colors.neutral[400]};
   border-radius: 8px;
   margin: 10px;
-  padding: 5px 15px;
 `;
 
 const AccordionHeader = styled.div`
@@ -41,6 +41,13 @@ const AccordionHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   color: ${theme.colors.neutral[100]};
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: ${(props) => props.isOpen && theme.colors.neutral[200]};
+
+  &:hover {
+    background-color: ${theme.colors.neutral[200]};
+  }
 `;
 
 const AccordionTitle = styled.p`
@@ -56,4 +63,5 @@ const AccordionIcon = styled.div`
 const AccordionContent = styled.div`
   margin-top: 10px;
   color: #0f172a;
+  padding: 5px 15px;
 `;

@@ -20,7 +20,7 @@ const Accordion = (props) => {
   };
 
   return (
-    <div style={{ border: "2px solid #008f68" }}>
+    <div>
       {props.children.map((child) => (
         <AccordionSection
           isOpen={!!openSections[child.props.label]}
