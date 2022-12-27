@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from ".";
+import Accordion from "./Accordion";
 
 const accordionData = [
   {
@@ -45,8 +45,6 @@ export const Default = () => (
     </Accordion>
   </div>
 );
-
-Default.args = Template.bind({});
 
 export const MultipleOpen = () => (
   <div>

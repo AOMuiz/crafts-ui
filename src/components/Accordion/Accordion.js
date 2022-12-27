@@ -37,24 +37,7 @@ const Accordion = (props) => {
 
 export default Accordion;
 
-const AccordionItem = styled.div``;
-const AccordionTitle = styled.div``;
-const AccordionContent = styled.div``;
-
 Accordion.propTypes = {
   allowMultipleOpen: PropTypes.bool,
   children: PropTypes.instanceOf(Object).isRequired,
 };
-
-// Accordion.propTypes = {
-//   children: PropTypes.instanceOf(Object).isRequired,
-//   isOpen: PropTypes.bool.isRequired,
-//   label: PropTypes.string.isRequired,
-//   onClick: PropTypes.func.isRequired,
-// };
-
-// Accordion.defaultProps = {
-//   width: 100,
-//   height: 100,
-//   borderRadius: "none",
-// };

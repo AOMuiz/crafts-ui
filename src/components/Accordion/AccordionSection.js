@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import { theme } from "../../utils/theme";
 
 export const AccordionSection = (props) => {
   const onClick = () => {
@@ -6,34 +8,16 @@ export const AccordionSection = (props) => {
   };
 
   return (
-    <div
-      style={{
-        background: props.isOpen ? "#E9F1FF" : "#0066FF",
-        border: "1px solid #638EFF",
-        padding: "5px 10px",
-      }}
-    >
-      <div onClick={onClick} style={{ cursor: "pointer" }}>
-        {props.label}
-        <div style={{ float: "right" }}>
+    <AccordionItem isOpen={props.isOpen}>
+      <AccordionHeader onClick={onClick} style={{ cursor: "pointer" }}>
+        <AccordionTitle>{props.label}</AccordionTitle>
+        <AccordionIcon>
           {!props.isOpen && <span>&#9650;</span>}
           {props.isOpen && <span>&#9660;</span>}
-        </div>
-      </div>
-      {props.isOpen && (
-        <div
-          style={{
-            background: "#0154D1",
-            border: "2px solid #638EFF",
-            marginTop: 10,
-            padding: "10px 20px",
-            color: "white",
-          }}
-        >
-          {props.children}
-        </div>
-      )}
-    </div>
+        </AccordionIcon>
+      </AccordionHeader>
+      {props.isOpen && <AccordionContent>{props.children}</AccordionContent>}
+    </AccordionItem>
   );
 };
 
@@ -43,3 +27,33 @@ AccordionSection.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
+
+const AccordionItem = styled.div`
+  background: white;
+  border: 1px solid ${theme.colors.neutral[400]};
+  border-radius: 8px;
+  margin: 10px;
+  padding: 5px 15px;
+`;
+
+const AccordionHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: ${theme.colors.neutral[100]};
+`;
+
+const AccordionTitle = styled.p`
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+`;
+
+const AccordionIcon = styled.div`
+  color: #64748b;
+`;
+
+const AccordionContent = styled.div`
+  margin-top: 10px;
+  color: #0f172a;
+`;

@@ -2,7 +2,7 @@ import React from "react";
 import Link from ".";
 
 export default {
-  title: "Components/Link",
+  title: "Components/Navigation/Link",
   component: Link,
 };
 
