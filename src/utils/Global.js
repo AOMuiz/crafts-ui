@@ -3,6 +3,7 @@ import { primaryFont } from "./typography";
 // import { normalize } from "polished"; ${normalize()}
 
 export const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
 html {
   box-sizing: border-box;
   font-size: 16px;
