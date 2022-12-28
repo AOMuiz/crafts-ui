@@ -33,7 +33,7 @@ const AccordionItem = styled.div`
   background: white;
   border: 1px solid ${theme.colors.neutral[400]};
   border-radius: 8px;
-  margin: 10px;
+  margin: 5px;
 `;
 
 const AccordionHeader = styled.div`
@@ -45,7 +45,7 @@ const AccordionHeader = styled.div`
   cursor: pointer;
   background-color: ${(props) => props.isOpen && theme.colors.neutral[200]};
 
-  &:hover {
+  :hover {
     background-color: ${theme.colors.neutral[200]};
   }
 `;

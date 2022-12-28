@@ -6,13 +6,14 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Search, AtSign, ChevronDown, ChevronUp } from "react-feather";
+import { Search, AtSign, ChevronDown, ChevronUp, X } from "react-feather";
 
 const icons = {
   search: Search,
   "at-sign": AtSign,
   "chevron-down": ChevronDown,
   "chevron-up": ChevronUp,
+  cancel: X,
 };
 
 const Icon = ({ id, size, strokeWidth = 1, ...delegated }) => {

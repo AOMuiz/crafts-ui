@@ -46,6 +46,7 @@ Text.args = {
   size: "small",
   label: "Button",
   variant: "text",
+  p: "5px",
 };
 
 export const Disabled = Template.bind({});

@@ -2,7 +2,7 @@ import React from "react";
 import Skeleton from ".";
 
 export default {
-  title: "Components/Skeleton",
+  title: "Components/Feedback/Skeleton",
   component: Skeleton,
 };
 

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { colorsFn } from "../../utils/styledFunctions";
+import { colorsFn, spaceFn } from "../../utils/styledFunctions";
 import { variantStyles, sizeStyles } from "./ButtonUtils";
 
 const Button = ({ label, variant, size, className, ...delegated }) => {
@@ -24,6 +24,7 @@ const OButton = styled.button`
   ${({ variant }) => variantStyles(variant)}
   ${({ size }) => sizeStyles(size)}
   ${colorsFn}
+  ${spaceFn}
 `;
 
 export default Button;
