@@ -1,0 +1,37 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import InputRange from "./InputRange";
+
+<Meta
+  title="Components/Feedback/InputRange"
+  component={InputRange}
+  argTypes={{
+    max: {
+      control: {
+        min: 0,
+        max: 100,
+      },
+    },
+    min: {
+      control: {
+        min: 0,
+        max: 100,
+      },
+    },
+    size: {
+      control: {
+        type: "select",
+        options: ["small", "medium", "large"],
+      },
+    },
+  }}
+/>
+
+export const Template = (args) => <InputRange {...args} />;
+
+# InputRange
+
+<Canvas>
+  <Story name="Default" args={{ max: 50, min: 0 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

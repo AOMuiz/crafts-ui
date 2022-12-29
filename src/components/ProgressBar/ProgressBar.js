@@ -23,7 +23,7 @@ const STYLES = {
   },
 };
 
-const ProgressBar = ({ value, size }) => {
+const ProgressBar = ({ value, size, className }) => {
   const styles = STYLES[size];
 
   if (!styles) {
@@ -40,6 +40,7 @@ const ProgressBar = ({ value, size }) => {
         "--padding": styles.padding + "px",
         "--radius": styles.radius + "px",
       }}
+      className={className}
     >
       <VisuallyHidden>{value}%</VisuallyHidden>
       <BarWrapper>
